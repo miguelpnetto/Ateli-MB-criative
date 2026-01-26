@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resina Artesanal - Catálogo</title>
+    <!-- Link para o arquivo de estilo externo -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones do Google -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">✨ ResinaArts</div>
+        <div class="cart-icon" onclick="toggleCart()">
+            <span class="material-icons-round">shopping_bag</span>
+            <span class="cart-count" id="cart-count">0</span>
+        </div>
+    </header>
+
+    <div class="filters">
+        <button class="filter-btn active" onclick="filterProducts('todos')">Todos</button>
+        <button class="filter-btn" onclick="filterProducts('novidade')">Novidades 🔥</button>
+        <button class="filter-btn" onclick="filterProducts('oferta')">Ofertas 🏷️</button>
+    </div>
+
+    <div class="container" id="products-container">
+        <!-- Os produtos serão inseridos aqui pelo Javascript -->
+    </div>
+
+    <!-- Modal do Carrinho -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-header">
+            <h2>Seu Carrinho</h2>
+            <button class="close-cart" onclick="toggleCart()">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Itens do carrinho aparecem aqui -->
+            <p style="text-align: center; color: #888; margin-top: 20px;">Seu carrinho está vazio.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Total:</span>
+                <span id="cart-total">R$ 0,00</span>
+            </div>
+            <button class="checkout-btn" onclick="checkoutWhatsApp()">
+                Finalizar no WhatsApp <span class="material-icons-round" style="font-size: 18px; margin-left: 8px;">whatsapp</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Link para o arquivo de script externo -->
+    <script src="script.js"></script>
+</body>
+</html>
