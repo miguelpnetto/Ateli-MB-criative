@@ -19,7 +19,7 @@ const produtos = [
     },
     { 
         id: 3, 
-        nome: "Porta Copos Personalidado", 
+        nome: "Porta Copos Personalizado", 
         preco: 40.00, 
         prazo: "5 dias úteis", 
         tipo: "novidade", 
@@ -88,19 +88,26 @@ function renderProducts(filtro = 'todos') {
 
         const card = `
             <div class="card">
-                <img src="${produto.img}" alt="${produto.nome}" class="card-img">
-                <div class="card-body">
-                    ${badge}
-                    <h3 class="card-title">${produto.nome}</h3>
-                    <p class="card-prazo">🕒 ${produto.prazo}</p>
-                    <div class="card-footer">
-                        <span class="price">R$ ${produto.preco.toFixed(2).replace('.', ',')}</span>
-                        <button class="add-btn" onclick="addToCart(${produto.id})">
-                            <span class="material-icons-round">add</span>
-                        </button>
-                    </div>
-                </div>
+        <!-- Adicionei a div 'img-container' e o 'onclick' na imagem -->
+        <div class="img-container">
+            <img src="${produto.img}" 
+                 alt="${produto.nome}" 
+                 class="card-img" 
+                 onclick="verImagem('${produto.img}', '${produto.nome}')">
+        </div>
+
+        <div class="card-body">
+            ${badge}
+            <h3 class="card-title">${produto.nome}</h3>
+            <p class="card-prazo">🕒 ${produto.prazo}</p>
+            <div class="card-footer">
+                <span class="price">R$ ${produto.preco.toFixed(2).replace('.', ',')}</span>
+                <button class="add-btn" onclick="addToCart(${produto.id})">
+                    <span class="material-icons-round">add</span>
+                </button>
             </div>
+        </div>
+    </div>
         `;
         container.innerHTML += card;
     });
@@ -203,6 +210,17 @@ function checkoutWhatsApp() {
 
     const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
     window.open(url, '_blank');
+}
+
+// Funções novas para abrir e fechar
+function verImagem(url, nome) {
+    document.getElementById('lightbox-img').src = url;
+    document.getElementById('lightbox-caption').innerText = nome;
+    document.getElementById('lightbox').style.display = 'flex';
+}
+
+function fecharImagem() {
+    document.getElementById('lightbox').style.display = 'none';
 }
 
 // Fechar modal ao clicar fora

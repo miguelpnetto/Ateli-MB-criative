@@ -98,6 +98,14 @@ header {
     margin: 0 auto;
 }
 
+/* Container que segura a imagem e corta o excesso */
+.img-container {
+    overflow: hidden; 
+    height: 180px; /* Mesma altura que você usava antes */
+    position: relative;
+    border-radius: 15px 15px 0 0; /* Arredonda só em cima */
+}
+
 .card {
     background: var(--card-bg);
     border-radius: 15px;
@@ -116,8 +124,47 @@ header {
     width: 100%;
     height: 160px;
     background-color: #ddd;
-    object-fit: cover;
+    object-fit: cover; 
+    transition: transform 0.4s ease; /* Faz o zoom ser suave */
+    cursor: zoom-in; /* Mostra a lupa */
+    
 }
+
+/* O efeito mágico: aumenta 10% quando passa o mouse no container */
+.img-container:hover .card-img {
+    transform: scale(1.1);
+}
+
+/* --- ESTILO DO LIGHTBOX (TELA CHEIA) --- */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000; /* Bem alto para ficar acima de tudo */
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: zoom-out;
+    animation: fadeIn 0.3s;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    transform: scale(0.9);
+    animation: zoomUp 0.3s forwards;
+}
+
+.lightbox-caption {
+    color: white; margin-top: 15px; font-size: 1.2rem;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes zoomUp { to { transform: scale(1); } }
 
 .card-body {
     padding: 12px;
