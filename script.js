@@ -19,11 +19,11 @@ const produtos = [
     },
     { 
         id: 3, 
-        nome: "Porta Copos Geodo (Kit 4)", 
-        preco: 120.00, 
+        nome: "Porta Copos Personalidado", 
+        preco: 40.00, 
         prazo: "5 dias úteis", 
-        tipo: "normal", 
-        img: "https://via.placeholder.com/300/81C784/FFFFFF?text=Porta+Copos" 
+        tipo: "novidade", 
+        img: "img/porta-copo-personalizado.jpeg" 
     },
     { 
         id: 4, 
