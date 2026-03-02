@@ -388,3 +388,65 @@ header {
         transform: translateY(0);
     }
 }
+
+/* Botão que aparece só no celular */
+.menu-mobile-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 15px 20px;
+    padding: 10px 20px;
+    background: var(--cor-primaria);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Ajuste do menu para ser lateral no celular */
+@media (max-width: 768px) {
+    .menu-mobile-btn { display: flex; }
+
+    .filters {
+        position: fixed;
+        left: -280px; /* Escondido na esquerda */
+        top: 0;
+        width: 280px;
+        height: 100%;
+        background: white;
+        z-index: 1000;
+        flex-direction: column; /* Botões um abaixo do outro */
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 20px;
+        transition: 0.3s;
+        box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+        overflow-y: auto;
+    }
+
+    .filters.open { left: 0; } /* Abre o menu */
+
+    .filter-btn { width: 100%; text-align: left; margin-bottom: 5px; }
+
+    /* Overlay escuro ao abrir o menu */
+    .filters-overlay {
+        display: none;
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+    .filters-overlay.open { display: block; }
+
+    .menu-header {
+        display: flex; justify-content: space-between; width: 100%;
+        margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px;
+    }
+}
+
+/* No computador, mantém como era antes */
+@media (min-width: 769px) {
+    .menu-mobile-btn, .menu-header { display: none; }
+    .filters-overlay { display: none !important; }
+}

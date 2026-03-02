@@ -326,6 +326,31 @@ function renderProducts(filtro = 'todos') {
     });
 }
 
+function toggleMenu() {
+    const menu = document.getElementById('filters-menu');
+    const overlay = document.getElementById('filters-overlay');
+    
+    menu.classList.toggle('open');
+    overlay.classList.toggle('open');
+}
+
+// Modifique sua função de filtro para fechar o menu após escolher uma categoria
+function filterProducts(tipo) {
+    // Código que você já tem...
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    // Se foi um clique direto no botão
+    if(event.target.classList.contains('filter-btn')) {
+        event.target.classList.add('active');
+    }
+
+    renderProducts(tipo);
+    
+    // Fecha o menu se estiver no celular
+    if (window.innerWidth <= 768) {
+        toggleMenu();
+    }
+}
+
 // Filtrar produtos pelos botões
 function filterProducts(tipo) {
     // Atualiza visual dos botões

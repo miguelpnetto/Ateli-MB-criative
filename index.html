@@ -21,7 +21,16 @@
         </div>
     </header>
 
-    <div class="filters">
+    <button class="menu-mobile-btn" onclick="toggleMenu()">
+        <span class="material-icons-round">filter_list</span> Categorias
+    </button>
+
+    <div class="filters-overlay" id="filters-overlay" onclick="toggleMenu()"></div>
+    <div class="filters" id="filters-menu">
+        <div class="menu-header">
+            <h3>Categorias</h3>
+            <button class="close-menu" onclick="toggleMenu()">✕</button>
+        </div>
         <button class="filter-btn active" onclick="filterProducts('todos')">Todos</button>
         <button class="filter-btn" onclick="filterProducts('novidade')">Novidades ✨</button>
         <button class="filter-btn" onclick="filterProducts('oferta')">Ofertas 🔥</button>
