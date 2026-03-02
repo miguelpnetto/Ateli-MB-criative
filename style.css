@@ -104,6 +104,7 @@ header {
     height: 180px; /* Mesma altura que você usava antes */
     position: relative;
     border-radius: 15px 15px 0 0; /* Arredonda só em cima */
+    
 }
 
 .card {
@@ -127,7 +128,10 @@ header {
     object-fit: cover; 
     transition: transform 0.4s ease; /* Faz o zoom ser suave */
     cursor: zoom-in; /* Mostra a lupa */
-    
+
+    image-rendering: -webkit-optimize-contrast; /* Para Chrome/Safari */
+    image-rendering: crisp-edges;               /* Para Firefox */
+    transform: translateZ(0);
 }
 
 /* O efeito mágico: aumenta 10% quando passa o mouse no container */
@@ -173,18 +177,67 @@ header {
     flex-grow: 1;
 }
 
+/* Badge Padrão (Base) */
 .badge {
     display: inline-block;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
     font-weight: bold;
-    margin-bottom: 5px;
-    width: fit-content;
+    text-transform: uppercase;
+    margin-right: 5px;
+    margin-bottom: 8px;
+    border: 1px solid transparent;
 }
 
-.badge-novo { background: #E3F2FD; color: #2196F3; }
-.badge-oferta { background: #FFEBEE; color: #F44336; }
+/* Novidade (Azul - que você já tem) */
+.badge-novo {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    border-color: #bbdefb;
+}
+
+/* Oferta (Laranja/Vermelho) */
+.badge-oferta {
+    background-color: #fff3e0;
+    color: #ef6c00;
+    border-color: #ffe0b2;
+}
+
+/* Porta-Copo (Roxo/Lilás) */
+.badge-porta-copo {
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+    border-color: #e1bee7;
+}
+
+/* Brincos (Verde Água/Oceano) */
+.badge-brinco {
+    background-color: #e0f2f1;
+    color: #00796b;
+    border-color: #b2dfdb;
+}
+
+/* Chaveiros (Rosa/Coral) */
+.badge-chaveiro {
+    background-color: #fce4ec;
+    color: #c2185b;
+    border-color: #f8bbd0;
+}
+
+/* Badge para Letras Avulsas (Dourado/Elegante) */
+.badge-letra {
+    background-color: #fff9c4; /* Amarelo bem clarinho */
+    color: #fbc02d;            /* Dourado para o texto */
+    border: 1px solid #fff59d;
+}
+
+/* Badge para Pingentes (Verde Esmeralda / Elegante) */
+.badge-pingente {
+    background-color: #e0f2f1; /* Verde água bem clarinho */
+    color: #00897b;            /* Verde escuro para o texto */
+    border: 1px solid #b2dfdb;
+}
 
 .card-title {
     font-size: 1rem;

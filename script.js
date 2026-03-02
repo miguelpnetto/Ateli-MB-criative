@@ -1,69 +1,253 @@
 // --- CONFIGURAÇÃO DOS PRODUTOS ---
 // Adicione ou edite seus produtos aqui
 const produtos = [
-    { 
-        id: 1, 
-        nome: "Chaveiro Letra Inicial", 
-        preco: 25.00, 
-        prazo: "2 dias úteis", 
-        tipo: "novidade", 
-        img: "https://via.placeholder.com/300/6C63FF/FFFFFF?text=Letra+Resina" // Substitua pelo link da sua foto real
+    {
+        id: 1,
+        nome: "Par de Brincos Articulados Oceano",
+        preco: 40.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "brinco"],
+        img: "img/brincos-articulados-01.jpg" // Substitua pelo link da sua foto real
     },
-    { 
-        id: 2, 
-        nome: "Marca Página Floral", 
-        preco: 35.00, 
-        prazo: "3 dias úteis", 
-        tipo: "oferta", 
-        img: "https://via.placeholder.com/300/FF6584/FFFFFF?text=Marca+Pagina" 
+    {
+        id: 2,
+        nome: "Par de Brincos Articulados Coração com Losango",
+        preco: 35.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "brinco"],
+        img: "img/brincos-articulados-02.jpg"
     },
-    { 
-        id: 3, 
-        nome: "Porta Copos Personalizado", 
-        preco: 40.00, 
-        prazo: "5 dias úteis", 
-        tipo: "novidade", 
-        img: "img/porta-copo-personalizado.jpeg" 
+    {
+        id: 3,
+        nome: "Par de Brincos Articulados Concha",
+        preco: 40.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "brinco"],
+        img: "img/brincos-articulados-03.jpg"
     },
-    { 
-        id: 4, 
-        nome: "Bandeja Decorativa", 
-        preco: 180.00, 
-        prazo: "7 dias úteis", 
-        tipo: "novidade", 
-        img: "https://via.placeholder.com/300/BA68C8/FFFFFF?text=Bandeja" 
+    {
+        id: 4,
+        nome: "Par de Brincos Articulados Esquilo",
+        preco: 40.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "brinco"],
+        img: "img/brincos-articulados-04.jpg"
     },
-    { 
-        id: 5, 
-        nome: "Dominó Personalizado", 
-        preco: 150.00, 
-        prazo: "10 dias úteis", 
-        tipo: "normal", 
-        img: "https://via.placeholder.com/300/4FC3F7/FFFFFF?text=Domino" 
+    {
+        id: 5,
+        nome: "Par de Brincos Articulados Gato",
+        preco: 30.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "brinco"],
+        img: "img/brincos-articulados-05.jpg"
     },
-    { 
-        id: 6, 
-        nome: "Placa Pix com QR Code", 
-        preco: 55.00, 
-        prazo: "4 dias úteis", 
-        tipo: "oferta", 
-        img: "https://via.placeholder.com/300/FFD54F/FFFFFF?text=Placa+Pix" 
+    {
+        id: 6,
+        nome: "Par de Brincos Floral",
+        preco: 40.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "brinco"],
+        img: "img/brincos-biojoia-01.jpg"
     },
-    { 
-        id: 7, 
-        nome: "Caneta Personalizada", 
-        preco: 20.00, 
-        prazo: "2 dias úteis", 
-        tipo: "normal", 
-        img: "https://via.placeholder.com/300/A1887F/FFFFFF?text=Caneta" 
+    {
+        id: 7,
+        nome: "Par de Brincos Gota",
+        preco: 20.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "brinco"],
+        img: "img/brincos-gota-01.jpg"
     },
-    { 
-        id: 8, 
-        nome: "Pingente Pet", 
-        preco: 15.00, 
-        prazo: "2 dias úteis", 
-        tipo: "novidade", 
-        img: "https://via.placeholder.com/300/90A4AE/FFFFFF?text=Pingente+Pet" 
+    {
+        id: 8,
+        nome: "Par de Brincos Pet",
+        preco: 20.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "brinco"],
+        img: "img/brincos-pet-01.jpg"
+    },
+    {
+        id: 9,
+        nome: "Chaveiro Mandala Personalizado Amarelo",
+        preco: 25.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "chaveiro"],
+        img: "img/chaveiro-mandala-01.jpg"
+    },
+    {
+        id: 10,
+        nome: "Chaveiro Mandala Personalizado Lilás",
+        preco: 25.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "chaveiro"],
+        img: "img/chaveiro-mandala-02.jpg"
+    },
+    {
+        id: 11,
+        nome: "Chaveiro Mandala Personalizado Vermelho",
+        preco: 25.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "chaveiro"],
+        img: "img/chaveiro-mandala-03.jpg"
+    },
+    {
+        id: 12,
+        nome: "Chaveiro Mandala Personalizado Azul",
+        preco: 25.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "chaveiro"],
+        img: "img/chaveiro-mandala-04.jpg"
+    },
+    {
+        id: 13,
+        nome: "Chaveiro Personalizado Otaku",
+        preco: 35.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "chaveiro"],
+        img: "img/chaveiro-otaku-01.jpg"
+    },
+    {
+        id: 14,
+        nome: "Chaveiro Religioso",
+        preco: 20.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "chaveiro"],
+        img: "img/chaveiro-religioso-01.jpg"
+    },
+    {
+        id: 15,
+        nome: "Letra Avulsa Personalizada Roxo com Ouro",
+        preco: 15.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "letra"],
+        img: "img/letra-avulsa-01.jpg"
+    },
+    {
+        id: 16,
+        nome: "Letra Avulsa Personalizada Preto com Ouro",
+        preco: 15.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "letra"],
+        img: "img/letra-avulsa-02.jpg"
+    },
+    {
+        id: 17,
+        nome: "Letra Avulsa Personalizada Lilás com Ouro",
+        preco: 15.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "letra"],
+        img: "img/letra-avulsa-03.jpg"
+    },
+    {
+        id: 18,
+        nome: "Letra Avulsa Personalizada Marrom com Ouro",
+        preco: 15.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "letra"],
+        img: "img/letra-avulsa-04.jpg"
+    },
+    {
+        id: 19,
+        nome: "Letra Avulsa Personalizada Rosa",
+        preco: 15.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "letra"],
+        img: "img/letra-avulsa-05.jpg"
+    },
+    {
+        id: 20,
+        nome: "Letra Avulsa Personalizada Marrom com Corações Amarelos",
+        preco: 16.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "letra"],
+        img: "img/letra-avulsa-06.jpg"
+    },
+    {
+        id: 21,
+        nome: "Letra Avulsa Personalizada Vermelho com Cores Sortidas ",
+        preco: 15.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "letra"],
+        img: "img/letra-avulsa-07.jpg"
+    },
+    {
+        id: 22,
+        nome: "Letra Avulsa Personalizada Azul com Detalhes",
+        preco: 17.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "letra"],
+        img: "img/letra-avulsa-08.jpg"
+    },
+    {
+        id: 23,
+        nome: "Letra Avulsa Personalizada Dourado com Ouro e Glitter",
+        preco: 17.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "letra"],
+        img: "img/letra-avulsa-09.jpg"
+    },
+    {
+        id: 24,
+        nome: "Letra Avulsa Personalizada Laranja com Detalhes em Vermelho",
+        preco: 16.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "letra"],
+        img: "img/letra-avulsa-10.jpg"
+    },
+    {
+        id: 25,
+        nome: "Letra Avulsa Personalizada Preto com Brilhos",
+        preco: 16.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "letra"],
+        img: "img/letra-avulsa-11.jpg"
+    },
+    {
+        id: 26,
+        nome: "Letra Avulsa Personalizada Rosa com Ouro",
+        preco: 16.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "letra"],
+        img: "img/letra-avulsa-12.jpg"
+    },
+    {
+        id: 27,
+        nome: "Pingente Pet - Patinha",
+        preco: 10.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "pingente"],
+        img: "img/pingente-pet-01.jpg"
+    },
+    {
+        id: 28,
+        nome: "Porta Copos Personalizado 01",
+        preco: 50.00,
+        prazo: "4 dias úteis",
+        tipo: ["novidade", "porta-copo"],
+        img: "img/porta-copo-personalizado-01.jpg"
+    },
+    {
+        id: 29,
+        nome: "Porta Copos Personalizado 02",
+        preco: 50.00,
+        prazo: "4 dias úteis",
+        tipo: ["novidade", "porta-copo"],
+        img: "img/porta-copo-personalizado-02.jpg"
+    },
+    {
+        id: 30,
+        nome: "Porta Copos Personalizado gatos Yin-Yang",
+        preco: 50.00,
+        prazo: "4 dias úteis",
+        tipo: ["novidade", "porta-copo"],
+        img: "img/porta-copos-personalizados-03.jpg"
+    },
+    {
+        id: 31,
+        nome: "Porta Copos Personalizado Azul com Ouro",
+        preco: 40.00,
+        prazo: "3 dias úteis",
+        tipo: ["novidade", "porta-copo"],
+        img: "img/porta-copos-personalizados-04.jpg"
     }
 ];
 
@@ -76,20 +260,36 @@ function renderProducts(filtro = 'todos') {
     const container = document.getElementById('products-container');
     container.innerHTML = '';
 
-    const produtosFiltrados = filtro === 'todos' 
-        ? produtos 
-        : produtos.filter(p => p.tipo === filtro);
+    const produtosFiltrados = filtro === 'todos'
+        ? produtos
+        : produtos.filter(p => p.tipo.includes(filtro));
 
     produtosFiltrados.forEach(produto => {
         // Define o badge (etiqueta) se houver
         let badge = '';
-        if (produto.tipo === 'novidade') badge = '<span class="badge badge-novo">Novidade ✨</span>';
-        if (produto.tipo === 'oferta') badge = '<span class="badge badge-oferta">Oferta 🔥</span>';
+        produto.tipo.forEach(t => {
+            if (t === 'novidade') {
+                badge += '<span class="badge badge-novo">Novidade ✨</span>';
+            } else if (t === 'oferta') {
+                badge += '<span class="badge badge-oferta">Oferta 🔥</span>';
+            } else if (t === 'porta-copo') {
+                badge += '<span class="badge badge-porta-copo">Porta-Copo </span>';
+            } else if (t === 'brinco') {
+                badge += '<span class="badge badge-brinco">Brincos 💎</span>';
+            } else if (t === 'chaveiro') {
+                badge += '<span class="badge badge-chaveiro">Chaveiro 🔑</span>';
+            } else if (t === 'letra') {
+                badge += '<span class="badge badge-letra">Letra Personalizada 🔠</span>';
+            } else if (t === 'pingente') {
+                badge += '<span class="badge badge-pingente">Pingente 💎</span>';
+            }
+        })
+
 
         const card = `
     <div class="card">
         <div class="img-container">
-            <img src="${produto.img}" alt="${produto.nome}" class="card-img" onclick="verImagem('${produto.img}', '${produto.nome}')">
+            <img src="${produto.img}" alt="${produto.nome}" class="card-img" decoding="async" onclick="verImagem('${produto.img}', '${produto.nome}')">
         </div>
         
         <div class="card-body">
@@ -131,7 +331,7 @@ function filterProducts(tipo) {
     // Atualiza visual dos botões
     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
     event.target.classList.add('active');
-    
+
     renderProducts(tipo);
 }
 
@@ -140,7 +340,7 @@ function addToCart(id) {
     const produto = produtos.find(p => p.id === id);
     carrinho.push(produto);
     updateCart();
-    
+
     // Feedback visual simples
     const btn = event.currentTarget;
     const originalColor = btn.style.backgroundColor;
@@ -151,10 +351,10 @@ function addToCart(id) {
 // Atualizar carrinho (contagem e visual)
 function updateCart() {
     document.getElementById('cart-count').innerText = carrinho.length;
-    
+
     const cartItems = document.getElementById('cart-items');
     const totalElement = document.getElementById('cart-total');
-    
+
     if (carrinho.length === 0) {
         cartItems.innerHTML = '<p style="text-align: center; color: #888; margin-top: 20px;">Seu carrinho está vazio.</p>';
         totalElement.innerText = 'R$ 0,00';
@@ -190,7 +390,7 @@ function removeFromCart(index) {
 function toggleCart() {
     const modal = document.getElementById('cart-modal');
     const overlay = document.getElementById('cart-overlay');
-    
+
     if (modal.classList.contains('open')) {
         modal.classList.remove('open');
         overlay.style.display = 'none';
@@ -208,7 +408,7 @@ function checkoutWhatsApp() {
     }
 
     // SEU NÚMERO AQUI (com DDD 55 na frente)
-    const numeroWhatsApp = "5581997192611"; 
+    const numeroWhatsApp = "5581997192611";
 
     let mensagem = "*Olá! Gostaria de fazer um pedido de peças em Resina:*\n\n";
     let total = 0;
@@ -241,9 +441,9 @@ function mudarQtd(id, delta) {
     const span = document.getElementById(`qtd-${id}`);
     let qtdAtual = parseInt(span.innerText);
     let novaQtd = qtdAtual + delta;
-    
+
     if (novaQtd < 1) novaQtd = 1; // Não deixa ser menor que 1
-    
+
     span.innerText = novaQtd;
 }
 
@@ -251,22 +451,22 @@ function mudarQtd(id, delta) {
 function addToCart(id) {
     const produtoOriginal = produtos.find(p => p.id === id);
     const qtdSelecionada = parseInt(document.getElementById(`qtd-${id}`).innerText);
-    
+
     // Verifica se já tem no carrinho
     const itemExistente = carrinho.find(item => item.id === id);
-    
+
     if (itemExistente) {
         itemExistente.quantidade += qtdSelecionada;
     } else {
         // Cria uma cópia do produto para não afetar o original e adiciona qtd
         carrinho.push({ ...produtoOriginal, quantidade: qtdSelecionada });
     }
-    
+
     updateCart();
-    
+
     // Reseta o contador visual para 1
     document.getElementById(`qtd-${id}`).innerText = "1";
-    
+
     // Mostra a mensagem de sucesso
     mostrarMensagem(`+ ${qtdSelecionada}x ${produtoOriginal.nome} adicionado!`);
 }
@@ -286,11 +486,11 @@ function mostrarMensagem(texto) {
         `;
         document.body.appendChild(msgDiv);
     }
-    
+
     msgDiv.innerText = texto;
     msgDiv.style.opacity = '1';
     msgDiv.style.top = '30px'; // Pequeno movimento para baixo
-    
+
     // Esconde depois de 3 segundos
     setTimeout(() => {
         msgDiv.style.opacity = '0';
@@ -302,11 +502,11 @@ function updateCart() {
     // Contagem total de itens (soma das quantidades)
     const totalItens = carrinho.reduce((acc, item) => acc + item.quantidade, 0);
     document.getElementById('cart-count').innerText = totalItens;
-    
+
     const itemsDiv = document.getElementById('cart-items');
     const totalDiv = document.getElementById('cart-total');
-    
-    if(carrinho.length === 0) {
+
+    if (carrinho.length === 0) {
         itemsDiv.innerHTML = '<p style="text-align: center; color: #888; margin-top: 20px;">Vazio</p>';
         totalDiv.innerText = 'R$ 0,00';
         return;
@@ -314,11 +514,11 @@ function updateCart() {
 
     itemsDiv.innerHTML = '';
     let total = 0;
-    
+
     carrinho.forEach((item, index) => {
         const subtotal = item.preco * item.quantidade;
         total += subtotal;
-        
+
         itemsDiv.innerHTML += `
             <div class="cart-item" style="display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid #eee;">
                 <div>

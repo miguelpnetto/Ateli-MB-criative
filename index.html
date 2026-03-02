@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <!-- Ícones do Google -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 </head>
+
 <body>
 
     <header>
@@ -23,6 +25,11 @@
         <button class="filter-btn active" onclick="filterProducts('todos')">Todos</button>
         <button class="filter-btn" onclick="filterProducts('novidade')">Novidades ✨</button>
         <button class="filter-btn" onclick="filterProducts('oferta')">Ofertas 🔥</button>
+        <button class="filter-btn" onclick="filterProducts('brinco')">Brincos 💎</button>
+        <button class="filter-btn" onclick="filterProducts('porta-copo')">Porta-Copos ☕</button>
+        <button class="filter-btn" onclick="filterProducts('letra')">Letras 🔠</button>
+        <button class="filter-btn" onclick="filterProducts('pingente')">Pingentes 💎</button>
+        <button class="filter-btn" onclick="filterProducts('chaveiro')">Chaveiros 🔑</button>
     </div>
 
     <div class="container" id="products-container">
@@ -46,11 +53,12 @@
                 <span id="cart-total">R$ 0,00</span>
             </div>
             <button class="checkout-btn" onclick="checkoutWhatsApp()">
-                Finalizar no WhatsApp <span class="material-icons-round" style="font-size: 18px; margin-left: 8px;">whatsapp</span>
+                Finalizar no WhatsApp <span class="material-icons-round"
+                    style="font-size: 18px; margin-left: 8px;">whatsapp</span>
             </button>
         </div>
     </div>
-    
+
     <div class="lightbox" id="lightbox" onclick="fecharImagem()">
         <img class="lightbox-content" id="lightbox-img">
         <div class="lightbox-caption" id="lightbox-caption"></div>
@@ -60,4 +68,5 @@
     <!-- Link para o arquivo de script externo -->
     <script src="script.js"></script>
 </body>
+
 </html>
